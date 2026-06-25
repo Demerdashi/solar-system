@@ -6,6 +6,8 @@ on:
     branches:
       - main
       - 'feature/*'
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     
 jobs:
@@ -20,8 +22,7 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: 20
-          env:
-            ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+          
 
     
         - name: Install Dependencies
